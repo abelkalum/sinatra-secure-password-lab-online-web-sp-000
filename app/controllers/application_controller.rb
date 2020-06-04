@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
 		if user && user.authenticate(params[:password])
 			redirect to "/account"
 		else
-			redirect to "/"
+			redirect to "/failure"
 		end
   end
 
