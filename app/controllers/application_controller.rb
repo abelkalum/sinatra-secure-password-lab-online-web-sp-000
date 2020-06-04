@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
 		if user && user.authenticate(params[:password])
 			redirect to "/account"
 		else
-			erb :'login'
+			redirect to "/"
 		end
   end
 
